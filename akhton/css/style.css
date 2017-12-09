@@ -154,7 +154,7 @@ p {
 
 #home .btn-danger {
   background: #ffa400 !important;
-  margin-right: 200px;
+  margin-right: 100px;
 }
 
 #home .btn-danger:hover {
@@ -168,7 +168,7 @@ p {
   font-size: 12px;
   font-weight: bold;
   padding: 14px 52px;
-  margin-top: 40px;
+  margin-top: 700px;
   transition: all 0.4s ease-in-out;
   border-radius: 50px 50px 50px 50px;
 }
