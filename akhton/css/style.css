@@ -454,6 +454,22 @@ footer a:hover {
 		line-height: 24px;
 	}
 }
+
+#video-elem {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+video {
+  background-color: black;
+  background-image: url (../video/GifokBxl.mp4);
+  background-position: center center;
+  background-size: contain;
+	object-fit: cover;
+}
 /* mobile responsive section styles
 /* ========================================== */
 @media (max-width: 768px) {
@@ -498,9 +514,3 @@ footer a:hover {
 }
 
 /*bgv */
-#video-elem {
-	width: 100%;
-	height: auto;
-	z-index: 1;
-
-}
