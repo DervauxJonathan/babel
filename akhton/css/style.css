@@ -508,6 +508,15 @@ video {
 	position: absolute;
 	z-index: 5;
 }
+
+.videointro {
+	z-index: 55 !important;
+	display: flex !important;
+	justify-content: center !important;
+	width: 100% !important;
+	margin-bottom: 50px !important;
+
+}
 /* mobile responsive section styles
 /* ========================================== */
 @media (max-width: 768px) {
