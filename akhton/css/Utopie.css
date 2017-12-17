@@ -73,6 +73,12 @@ top: 0; left: 0; right: 0;
 	z-index: 9500;
 }*/
 
+.wazaa img{
+width: 100%;
+
+z-index: 5000;
+
+}
 
  /*a implanter */
 #paragraphe {
@@ -90,7 +96,8 @@ top: 0; left: 0; right: 0;
 }
 
 #couvrePage img {
-	margin-top: 280px;
+	margin-top: -90px;
+    margin-left: -56px;
 }
 
 #cercle1 {
@@ -592,3 +599,5 @@ video {
 }
 
 /*bgv */
+
+/*articl utop info*/
