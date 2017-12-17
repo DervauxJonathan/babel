@@ -1,30 +1,30 @@
 /* JS will not correctly work when switching between desktop and mobile unless in debug mode */
 
 $(function(){
-	
+
 	var timeline = $('#timeline').find('.line');
 	var timelineDot = $(timeline).find('.dot');
 	var numDots = $(timeline).find('.year.dot').length * 4 + 1;
 	var mobileYear = $(timeline).find('.year.dot');
 	var mobileDefault = $(timeline).find('.dot.js-mobile-default');
-	
+
 	$(mobileDefault).addClass('active');
-	
+
 	// CONTENT SWITCH
 	$(timelineDot).each(function(){
 		$(this).click(function(){
 			var currentDesc = $('#description').find('.section-wrapper > div');
 			$(currentDesc).hide();
-			
+
 			matchContent($(this)).fadeIn();
 		});
 	});
 
 	var resizeTimer;
 	var initialSize = $(window).width();
-	
+
 	$(window).resize(function(){
-		
+
 		clearTimeout(resizeTimer);
 		resizeTimer = setTimeout(function(){
 			var delayedSize = $(window).width();
@@ -36,17 +36,17 @@ $(function(){
 					mobileTimeline();
 				}
 			}
-					
+
 			// if we resize the page and switch between desktop and mobile layouts, reload the page
 			else {
 				location.reload();
 			}
-			
+
 			initialSize = delayedSize;
 		}, 250);
-		
+
 	});
-	
+
 	// DESKTOP FUNCTIONALITY
 	function desktopTimeline(){
 		$(timelineDot).each(function(){
@@ -69,7 +69,7 @@ $(function(){
 			});
 		});
 	}
-	
+
 	// MOBILE FUNCTIONALITY
 	function mobileTimeline() {
 		$(timelineDot).click(function(){
@@ -95,7 +95,7 @@ $(function(){
 			}
 		});
 	}
-	
+
 	// RETRIEVE ELEMENT'S INDEX AMONG VISIBLE DOTS
 	function findIndex(dataInd) {
 		return $(dataInd).attr('data-index');
@@ -104,12 +104,12 @@ $(function(){
 	function matchContent(matchedContent){
 		return $('#description').find('.section-wrapper > div[data-index="' + $(matchedContent).attr("data-index") + '"]');
 	}
-	
+
 	// ROUND DECIMALS
 	function round(value, decimals) {
 		return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
 	}
 
-	
+
 	$(window).resize();
 });
